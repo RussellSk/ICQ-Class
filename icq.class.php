@@ -159,18 +159,15 @@ class ICQ {
     
     function icqLoop($uin,$_msg)
     {
-        for($i=0;$i<=30;$i++)
-        {
-            $this->SendMsg($uin,$_msg);
-            sleep(1);
-            $this->SendSSIxReply($uin,"SSSSSSSSSSS",0);
-            sleep(1);
-            $this->SendSSI($uin,"SendSSI; vas dobavili");
-            sleep(1);
-            $this->SendSSIxReply($uin,"aaaaaaaaaa",1);
-            sleep(1);
-            $this->icqPing();    
-        }
+        $this->SendMsg($uin,$_msg);
+        sleep(1);
+        $this->SendSSIxReply($uin,"SSSSSSSSSSS",0);
+        sleep(1);
+        $this->SendSSI($uin,"SendSSI; vas dobavili");
+        sleep(1);
+        $this->SendSSIxReply($uin,"aaaaaaaaaa",1);
+        sleep(1);
+        $this->icqPing();    
         $this->icqBye();
     }
 }
