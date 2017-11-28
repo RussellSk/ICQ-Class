@@ -5,7 +5,7 @@ SendSSIxReply, SendSSI, SendSSIxReply, SendMsg. <br /><br />
 
 ## Usage example
 ```php
-$cicq = new CicqFlood();
+$cicq = new ICQ();
 if($cicq->connect("362555877","GUPLTWCC"))
 {
   $cicq->icqLoop("458172","hi");
